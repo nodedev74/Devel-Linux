@@ -1,2 +1,2 @@
 # Devel-Linux
-is a custom made live-distro based on debian.
+is a custom made live distro based on debian.
