@@ -1,0 +1,20 @@
+# live-build
+
+.build/
+
+binary/
+cache/
+chroot/
+local/
+
+binary.modified_timestamps
+
+chroot.files
+chroot.packages.install
+chroot.packages.live
+
+live-image-*.contents
+live-image-*.files
+live-image-*.hybrid.iso
+live-image-*.hybrid.iso.zsync
+live-image-*.packages
