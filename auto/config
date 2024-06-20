@@ -1,0 +1,11 @@
+#!/bin/sh
+lb config noauto \
+  -d bookworm \
+  --mode debian \
+  --debian-installer live \
+  --bootappend-live "boot=live" \
+  --archive-areas "main contrib non-free non-free-firmware" \
+  --binary-image iso-hybrid \
+  --debootstrap-options "--variant=minbase"
+
+"${@}"
