@@ -1,4 +1,5 @@
 #!/bin/sh
+
 lb config noauto \
   -d bookworm \
   --mode debian \
@@ -6,6 +7,6 @@ lb config noauto \
   --bootappend-live "boot=live" \
   --archive-areas "main contrib non-free non-free-firmware" \
   --binary-image iso-hybrid \
-  --debootstrap-options "--variant=minbase"
+  --debootstrap-options "--variant=minbase --include=apt-transport-https,ca-certificates,openssl"
 
 "${@}"
