@@ -1,0 +1,25 @@
+# i3 config file v3
+#
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+set $mod                            Mod4
+
+set $wm_app_terminal                alacritty
+set $wm_app_browser                 firefox     
+set $wm_app_launcher                rofi
+
+# Startup applications
+
+exec_always --no-startup-id picom 
+
+# Application shortcuts
+
+bindsym $mod+Return exec $wm_app_terminal
+
+bindsym $mod+Shift+Return exec $wm_app_browser
+
+bindsym $mod+d exec $wm_app_launcher
+
+# Window shortcuts
+
+bindsym $mod+Shift+q kill
