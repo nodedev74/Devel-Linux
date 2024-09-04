@@ -1,0 +1,9 @@
+[submodule "pkgs/i3solate"]
+	path = pkgs/i3solate
+	url = https://github.com/nodedev74/i3solate
+[submodule "pkgs/templateDB"]
+	path = pkgs/templateDB
+	url = https://github.com/nodedev74/templateDB
+[submodule "pkgs/partopen"]
+	path = pkgs/partopen
+	url = https://github.com/nodedev74/partopen
