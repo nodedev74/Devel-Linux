@@ -55,7 +55,7 @@ LB_MODE="debian"
 LB_SYSTEM="live"
 
 # Set base name of the image
-LB_IMAGE_NAME="live-image"
+LB_IMAGE_NAME="devel-linux"
 
 # Set options to use with apt
 APT_OPTIONS="--yes -o Acquire::Retries=5"
@@ -64,7 +64,7 @@ APT_OPTIONS="--yes -o Acquire::Retries=5"
 APTITUDE_OPTIONS="--assume-yes -o Acquire::Retries=5"
 
 # Set options to use with debootstrap
-DEBOOTSTRAP_OPTIONS="--variant=minbase"
+DEBOOTSTRAP_OPTIONS="--variant=minbase --include=apt-transport-https,gnupg,openssl"
 
 # Set script to use with debootstrap
 DEBOOTSTRAP_SCRIPT=""
