@@ -2,9 +2,10 @@
 
 VERSION				= 0.1
 NAME				= devel-linux
-LABEL				= Devel Linux	
-PUBLISHER			= nodedev74 <buelenard@tutanota.com>
+LABEL				= "Devel Linux"	
+PUBLISHER			= "nodedev74 <buelenard@tutanota.com>"
 
 USERNAME			= nodedev
+LOCALES				= en_US.UTF-8
 TIMEZONE			= Europe/Berlin
-KEYBOARD_LAYOUT		= de
+KEYBOARD_LAYOUTS	= de
