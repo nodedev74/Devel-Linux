@@ -8,7 +8,7 @@ then
     exit 1
 fi
 
-sudo apt-get install live-build git
+sudo apt-get install live-build git cryptsetup
 
 cp config.example.mk config.mk
 cp .env.example .env
