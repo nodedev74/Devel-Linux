@@ -14,7 +14,7 @@ test:
 
 install:
 	@if [ "$(USB_DEVICE)" != "" ]; then \
-		bash scripts/install.sh  $(USB_DEVICE) $(PARTITION_PASSPHRASE); \
+		bash scripts/install.sh  $(USB_DEVICE) $(USERNAME) $(PARTITION_PASSPHRASE); \
 	else \
 		echo "test"; \
 	fi
