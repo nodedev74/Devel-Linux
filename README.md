@@ -1,12 +1,12 @@
 # Devel Linux
-is a customized linux distribution based on debian. It is configured to fit the needs of developers.
+is a customized Linux distribution based on Debian, specifically configured to meet the needs of developers.
 
 ## Usage
 > [!IMPORTANT]  
-> This project can only be used on debian based systems.
+> This project can only be used on Debian-based systems (e.g., Debian & Ubuntu)
 
 
-Make sure to run the bootstrap command first and follow the commands instructions.
+To use the toolset, you must first run the bootstrap process. This step installs all necessary dependencies and prepares the system for use.
 ```bash
 make bootstrap
 ```
