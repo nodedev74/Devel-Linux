@@ -37,4 +37,5 @@ The built distribution can be installed on a USB-Device. As the system requires 
 
 ### Test
 
-
+## Maintenance
+This project is maintained by [nodedev74](https://github.com/nodedev74) for personal usage.
