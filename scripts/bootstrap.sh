@@ -23,5 +23,12 @@ sudo lb chroot
 
 for file in $(find . -name '*.url');
 do
+    directory=$(dirname $file)
+    read -r url < $file
+    filename=$(basename -- $url)
+    path="${directory}/${filename}"
     
+    wget -O $path $url
+    git update-index --assume-unchanged $file
+    rm -f $file
 done
