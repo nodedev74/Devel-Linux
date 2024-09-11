@@ -1,1 +1,4 @@
-
+xinit
+xserver-xorg
+xserver-xorg-input-all
+xserver-xorg-video-all
