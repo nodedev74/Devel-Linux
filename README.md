@@ -1,4 +1,5 @@
 # Devel Linux
+is a customized linux distribution based on debian. It is configured to fit the needs of developers.
 
 ## Usage
 > [!IMPORTANT]  
