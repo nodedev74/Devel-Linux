@@ -8,6 +8,14 @@ then
     exit 1
 fi
 
+echo "[Warning] "
+
+response=$(read -p "Continue? (Y/N) ")
+if [];
+then
+    exit 1
+fi
+
 response=$(read -p "")
 if [];
 then
