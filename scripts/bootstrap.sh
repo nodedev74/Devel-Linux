@@ -8,12 +8,11 @@ then
     exit 1
 fi
 
-echo "[Warning] "
-
-response=$(read -p "Continue? (Y/N) ")
-if [];
+if [ -f .bs ];
 then
-    exit 1
+    echo "[Warning] "
+
+    response=$(read -p "Continue? (Y/N) ")
 fi
 
 response=$(read -p "")
@@ -83,3 +82,7 @@ do
     git update-index --assume-unchanged $file
     rm -f $file
 done
+
+cat <<EOF >> .bs
+$(date '+%Y-%m-%d %H:%M:%S')
+EOF
