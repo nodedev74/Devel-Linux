@@ -16,6 +16,10 @@ make bootstrap
 ### Configure
 
 ### Build
+Whenever the project is configured correctly you can build the ISO file for the distribution.
+```bash
+make build
+```
 
 ### Install
 The built distribution can be installed on a USB-Device. As the system requires a persistent partition it will install one as well.
