@@ -12,5 +12,6 @@ LOCALES				    = en_US.UTF-8
 TIMEZONE			    = UTC
 KEYBOARD_LAYOUTS	= en
 
-# Obsidian plugins
+# Obsidian
 
+# Firefox
