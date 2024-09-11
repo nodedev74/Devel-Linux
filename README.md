@@ -13,3 +13,12 @@ To use the toolset, you must first run the bootstrap process. This step installs
 ```bash
 make bootstrap
 ```
+### Configure
+
+### Build
+
+### Install
+
+### Test
+
+
