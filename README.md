@@ -20,7 +20,7 @@ You can configure the following content:
 General build configurations.
 
 #### [`.env`](https://github.com/nodedev74/Devel-Linux/blob/master/.env.exampe)
-Project secrets like passwords and passphrases for the resulting users and disk encryption. 
+Project secrets like **passwords** and **passphrases** for the resulting users and disk encryption. 
 
 ### Build
 Whenever the project is configured correctly you can build the ISO file for the distribution.
