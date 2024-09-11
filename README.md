@@ -24,14 +24,14 @@ Project secrets like *passwords* and *passphrases* for the resulting users and d
 
 ### Build
 Whenever the project is configured correctly you can build the ISO file for the distribution.
-```shell
+```
 $ make build
 ```
 
 ### Install
 The built distribution can be installed on a USB-Device. As the system requires a persistent partition it will create one as well.
 
-```shell
+```
 # make install USB_DEVICE=/dev/sdX
 ```
 
