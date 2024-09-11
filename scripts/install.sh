@@ -14,19 +14,18 @@ PASSPHRASE="$3"
 
 if [ id -u != 0 ];
 then 
-    echo ""
+    echo "[Error] The Command has to be run as priviliged user"
     exit 1
 fi
 
 if [ -z "${ISO_FILE}" ];
 then
-    echo ""
+    echo "[Error] There is no ISO file to install"
     exit 1
 fi
 
-echo ""
-
-# todo: wipe up whole disk
+echo "\n"
+read -p "Continue? (Y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 
 dd if="$ISO_FILE" of="$USB_DEVICE" conv=fsync bs=4M status=progress
 
@@ -44,7 +43,7 @@ tee /mnt/usb/persistence.conf <<EOF
 /home/$LIVE_USER/.zsh       link
 /home/$LIVE_USER/.oh-m-zsh  link
 
-/home/$LIVE_USER/.config
+/home/$LIVE_USER/.config    link
 
 /var/cache/apt
 EOF

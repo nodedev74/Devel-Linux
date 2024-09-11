@@ -2,9 +2,9 @@
 
 set -e
 
-if [ id -u = 0 ];
+if [ id -u == 0 ];
 then
-    echo ""
+    echo "[Error] "
     exit 1
 fi
 
