@@ -18,7 +18,7 @@ make bootstrap
 ### Build
 
 ### Install
-the built distribution can be installed on a USB-Device. As the system requires a persistent partition it will install one as well.
+The built distribution can be installed on a USB-Device. As the system requires a persistent partition it will install one as well.
 
 ```bash
 make install USB_DEVICE=/dev/sdX
