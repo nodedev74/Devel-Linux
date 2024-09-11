@@ -14,6 +14,16 @@ To use the toolset, you must first run the bootstrap process. This step installs
 make bootstrap
 ```
 ### Configure
+You can configure the following content:
+```
+.env
+
+Project secrets like passwords and passphrases for the resulting users and disk encryption. 
+
+config.mk
+
+
+```
 
 ### Build
 Whenever the project is configured correctly you can build the ISO file for the distribution.
