@@ -1,5 +1,7 @@
 # Example Config v1
 
+# ISO Meta
+
 VERSION				    = 0.1
 NAME				      = devel-linux
 LABEL				      = "Devel Linux"	
