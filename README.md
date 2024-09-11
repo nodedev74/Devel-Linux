@@ -1,5 +1,5 @@
 # Devel Linux
 
 ## Usage
-> [!INFO]  
+> [!NOTE]  
 > This project can only be used on debian based systems.
