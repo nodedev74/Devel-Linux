@@ -78,6 +78,7 @@ sudo lb clean --purge
 lb config noauto -d bookworm --debian-installer live --debian-installer-distribution bookworm \
     --archive-areas "main non-free-firmware" --debootstrap-options "--variant=minbase --include=apt-transport-https,gnupg,openssl"
 
+sudo lb bootstrap
 sudo lb chroot
 
 for file in $(find . -name '*.url');
