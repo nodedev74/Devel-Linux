@@ -1,0 +1,1 @@
+bindsym $mod+shift+s exec --no-startup-id flameshot gui

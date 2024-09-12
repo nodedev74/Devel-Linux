@@ -3,4 +3,7 @@ xserver-xorg
 xserver-xorg-input-all
 xserver-xorg-video-all
 
+gdm
 i3
+
+flameshot
