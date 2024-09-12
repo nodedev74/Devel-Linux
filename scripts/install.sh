@@ -20,7 +20,7 @@ fi
 
 if [ -z "${ISO_FILE}" ];
 then
-    echo "[Error] There is no ISO file to install"
+    echo "[Error] There is no iso file to install"
     exit 1
 fi
 
@@ -32,7 +32,7 @@ dd if="$ISO_FILE" of="$USB_DEVICE" conv=fsync bs=4M status=progress
 fdisk "$PERSISTENCE" <<< $(printf "n\np\n\n\n\nw")
 
 printf "$PASSPHRASE" | cryptsetup luksFormat "$PERSISTENCE"
-cryptsetup luksOpen /dev/sdX3 usb
+cryptsetup luksOpen "/dev/${USB_DEVICE}3" usb
 mkfs.ext4 -L persistence /dev/mapper/usb
 e2label /dev/mapper/usb persistence
 
