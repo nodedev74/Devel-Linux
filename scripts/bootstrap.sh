@@ -2,62 +2,69 @@
 
 set -e
 
-if [ id -u == 0 ];
+if [[ $(id -u) == 0 ]];
 then
-    echo "[Error] "
+    echo "[Error] This script should not be run as root"
     exit 1
 fi
 
-if [ -f .bs ];
-then
-    echo "[Warning] "
+if [[ -f .bs ]]; then
 
-    response=$(read -p "Continue? (Y/N) ")
+    echo "[Warning] Bootstrap has been allready executed"
+
+    read -p "Continue? (Y/N): " response
+    if [[ "${response,}" != "y" ]]; 
+    then
+        exit 0
+    fi
 fi
 
-response=$(read -p "")
-if [];
+read -p "Do you want to configure the build? (Y/N): " response
+
+if [[ "${response,}" == "y" ]];
 then
-    version=$(read -p "")
-    name=$(read -p "")
-    label=$(read -p "")
-    publisher=$(read -p "")
-    username=$(read -p "")
-    locales=$(read -p "")
-    timezone=$(read -p "")
-    keyboard_layouts=$(read -p "")
+    read -p "Version: " version
+    read -p "Name: " name
+    read -p "Label: " label
+    read -p "Publisher: " publisher
+    read -p "Username: " username
+    read -p "Locales: " locales
+    read -p "Timezone: " timezone
+    read -p "Keyboard Layouts: " keyboard_layouts
 
     cat <<EOF >> config.mk
-    # Config v1
+# Config v1
     
-    VERSION=${version}
-    NAME=${name}
-    LABEL=${label}
-    PUBLISHER=${publisher}
+VERSION=${version}
+NAME=${name}
+LABEL=${label}
+PUBLISHER=${publisher}
 
-    USERNAME=${username}
-    LOCALES=${locales}
-    TIMEZONE=${timezone}
-    KEYBOARD_LAYOUTS=${keyboard_layouts}
-    EOF
+USERNAME=${username}
+LOCALES=${locales}
+TIMEZONE=${timezone}
+KEYBOARD_LAYOUTS=${keyboard_layouts}
+EOF
+
 else 
-    echo "[Warning] "
+    echo "[Warning] The example configuration will be used"
     cp config.example.mk config.mk
 fi
 
-response=$(read -p "")
-if [];
+read -p "Do you want to set user and root passwords? (Y/N): " response
+if [[ "${response,}" == "y" ]]; 
 then
-    user_password=$(read -p "")
-    root_password=$(read -p "")
-    partition_passphrase=$(read -p "")
+    read -p "User Password: " user_password
+    read -p "Root Password: " root_password
+    read -p "Partition Passphrase: " partition_passphrase
 
     cat <<EOF >> .env
-    USER_PASSWORD=${user_password}
-    ROOT_PASSWORD=${root_password}
+USER_PASSWORD=${user_password}
+ROOT_PASSWORD=${root_password}
 
-    PARTITION_PASSPHRASE=${partition_passphrase}
-    EOF
+PARTITION_PASSPHRASE=${partition_passphrase}
+EOF
+
 else
     echo "[Warning] "
 fi
