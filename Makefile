@@ -16,5 +16,5 @@ install:
 	@if [ "$(USB_DEVICE)" != "" ]; then \
 		bash scripts/install.sh  $(USB_DEVICE) $(USERNAME) $(PARTITION_PASSPHRASE); \
 	else \
-		echo "test"; \
+		echo "[Error] You have to specify a USB-Device"; \
 	fi
