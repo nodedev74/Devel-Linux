@@ -1,8 +1,9 @@
 #
 
-include .env
-
-include config.mk
+ifneq ($(wildcard .bs),)
+    include .env
+    include config.mk
+endif
 
 bootstrap:
 	bash scripts/bootstrap.sh
