@@ -71,6 +71,8 @@ fi
 
 sudo apt-get -y install cryptsetup git live-build wget
 
+git submodule update --init --recursive
+
 sudo lb clean --purge
 
 lb config noauto -d bookworm --debian-installer live --debian-installer-distribution bookworm \
