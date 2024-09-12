@@ -79,7 +79,6 @@ lb config noauto -d bookworm --debian-installer live --debian-installer-distribu
     --archive-areas "main non-free-firmware" --debootstrap-options "--variant=minbase --include=apt-transport-https,gnupg,openssl"
 
 sudo lb bootstrap
-sudo lb chroot
 
 for file in $(find . -name '*.url');
 do
@@ -92,6 +91,8 @@ do
     git update-index --assume-unchanged $file
     rm -f $file
 done
+
+sudo lb chroot
 
 cat <<EOF >> .bs
 $(date '+%Y-%m-%d %H:%M:%S')
