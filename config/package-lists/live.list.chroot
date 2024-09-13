@@ -3,3 +3,4 @@ live-config
 live-config-systemd
 plymouth
 systemd-sysv
+zsh

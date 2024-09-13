@@ -27,6 +27,6 @@ lb config noauto \
     --debian-installer none \
     --archive-areas "main contrib non-free-firmware" \
     --debootstrap-options "--variant=minbase --include=apt-transport-https,gnupg,openssl" \
-    --bootappend-live "boot=live components username=$LIVE_USERNAME locales=$LIVE_LOCALES timezone=$LIVE_TIMEZONE keyboard-layouts=$LIVE_KEYBOARD_LAYOUT"
+    --bootappend-live "boot=live components username=$LIVE_USERNAME locales=$LIVE_LOCALES timezone=$LIVE_TIMEZONE keyboard-layouts=$LIVE_KEYBOARD_LAYOUT noautologin"
 
 sudo lb build
