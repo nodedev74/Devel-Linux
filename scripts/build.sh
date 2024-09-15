@@ -2,7 +2,7 @@
 
 set -e
 
-if [ id -u = 0 ];
+if [[ $(id -u) == 0 ]];
 then
     echo ""
     exit 1
